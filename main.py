@@ -1,16 +1,31 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+from patoFlix import PatoFlix
+from usuarioConcreto import UsuarioConcreto
+from filme import Filme
 
 
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    plataforma = PatoFlix()
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    usuario1 = UsuarioConcreto("Ana Ribeiro",["Ação", "Romance"])
+    usuario2 = UsuarioConcreto("Lucas Silva", ["Comédia", "Terror"])
+    usuario3 = UsuarioConcreto("Andre Bona", ["Ação", "Comédia"])
+    usuario4 = UsuarioConcreto("Fernanda Ferraz", ["Terror", "Anime"])
+    usuario5 = UsuarioConcreto("Bruno Daniel", ["Anime", "Ação"])
+
+    plataforma.inscrever(usuario1)
+    plataforma.inscrever(usuario2)
+    plataforma.inscrever(usuario3)
+    plataforma.inscrever(usuario4)
+    plataforma.inscrever(usuario5)
+
+    filme1 = Filme("007: O ultimo tiro", "Ação")
+    filme2 = Filme("Exorcistas Aposentados", "Terror")
+    filme3 = Filme("One Piece 2", "Anime")
+    filme4 = Filme("Blade Runner: Agora a história é outra", "Ficção")
+    filme5 = Filme("Beijocas e Tals", "Romance")
+
+    plataforma.adicionar_filme(filme1)
+    plataforma.adicionar_filme(filme2)
+    plataforma.adicionar_filme(filme3)
+    plataforma.adicionar_filme(filme4)
+    plataforma.adicionar_filme(filme5)
